@@ -5,6 +5,7 @@ Anlık olarak döviz alım satım işlemleri yapan bir kuruluşta TCMB den anlı
 #SCREEN SHOT
 
 NOT: DAHA FAZLA EKRAN GÖRÜNTÜSÜ İÇİN RESİMLERİN ÜSTÜNE TIKLAYINIZ.
+
 [![screenshot](ScreenShot/1.png)](https://github.com/anilklc/Currency/tree/main/ScreenShot) 
 [![screenshot](ScreenShot/3.png)](https://github.com/anilklc/Currency/tree/main/ScreenShot) 
 [![screenshot](ScreenShot/4.png)](https://github.com/anilklc/Currency/tree/main/ScreenShot)
