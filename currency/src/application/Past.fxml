@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="670.0" maxWidth="960.0" prefHeight="670.0" prefWidth="960.0" style="-fx-background-color: #1A1A1A;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PastController">
+   <children>
+      <AnchorPane layoutX="72.0" layoutY="273.0" maxHeight="670.0" maxWidth="824.0" prefHeight="346.0" prefWidth="824.0" style="-fx-background-color: #1A1A1A; -fx-background-radius: 20; -fx-border-color: FFFF00; -fx-border-radius: 20;">
+         <children>
+            <Label layoutX="27.0" layoutY="-12.0" style="-fx-background-color: #1A1A1A;" text="Geçmiş İşlem Listesi" textFill="YELLOW">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <TableView fx:id="operation_tableview" layoutX="12.0" layoutY="22.0" onKeyPressed="#customerName_text_Pressed" prefHeight="302.0" prefWidth="800.0">
+               <columns>
+                  <TableColumn fx:id="uName_clm" prefWidth="100.0" text="Çalışan Adı" />
+                  <TableColumn fx:id="uSurname_clm" prefWidth="100.0" text="Çalışan Soyadı" />
+                  <TableColumn fx:id="name_clm" prefWidth="100.0" text="M. Adı" />
+                  <TableColumn fx:id="surname_clm" prefWidth="100.0" text="M. Soyadı" />
+                  <TableColumn fx:id="TC_clm" prefWidth="100.0" text="M. TC" />
+                  <TableColumn fx:id="phone_clm" text="M. Telefon" />
+                  <TableColumn fx:id="mail_clm" text="M. Mail" />
+                  <TableColumn fx:id="sell_clm" text="Alınan P.B." />
+                  <TableColumn fx:id="buy_clm" text="Satılan P.B." />
+                  <TableColumn fx:id="sellPrice_clm" text="S.P. Anlık" />
+                  <TableColumn fx:id="buyAmount_clm" text="A. Para M." />
+                  <TableColumn fx:id="sellAmount_clm" text="Satılan P.M." />
+                  <TableColumn fx:id="operationDate_clm" prefWidth="150.0" text="İşlem Tarihi" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="72.0" layoutY="65.0" maxHeight="670.0" maxWidth="824.0" prefHeight="67.0" prefWidth="824.0" style="-fx-background-color: #1A1A1A; -fx-background-radius: 20; -fx-border-color: FFFF00; -fx-border-radius: 20;">
+         <children>
+            <Label layoutX="27.0" layoutY="-12.0" style="-fx-background-color: #1A1A1A;" text="Kullanıcı Bilgileri" textFill="YELLOW">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="nameSurname_label" layoutX="90.0" layoutY="20.0" text="Ad - Soyad:" textFill="YELLOW" AnchorPane.rightAnchor="642.0">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="nameSurname_cBox" layoutX="188.0" layoutY="14.0" maxHeight="35.0" maxWidth="200.0" onAction="#nameSurname_cBox_Click" prefHeight="39.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-radius: 50; -fx-background-radius: 50; -fx-border-color: ffff00;" stylesheets="@application.css" />
+            <Button fx:id="listAll_button" layoutX="532.0" layoutY="12.0" mnemonicParsing="false" onAction="#listAll_button_Click" prefHeight="37.0" prefWidth="172.0" style="-fx-background-color: transparent; -fx-border-color: FFFF00; -fx-border-radius: 50; -fx-background-radius: 50;" text="T. Listele" textAlignment="CENTER" textFill="YELLOW">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/icon/bullet-list.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="72.0" layoutY="157.0" maxHeight="670.0" maxWidth="824.0" prefHeight="84.0" prefWidth="824.0" style="-fx-background-color: #1A1A1A; -fx-background-radius: 20; -fx-border-color: FFFF00; -fx-border-radius: 20;">
+         <children>
+            <Label layoutX="27.0" layoutY="-12.0" style="-fx-background-color: #1A1A1A;" text="Sıralama Filtresi" textFill="YELLOW">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="filterType_cBox" layoutX="134.0" layoutY="25.0" maxHeight="35.0" maxWidth="200.0" onAction="#filterType_cBox_Click" prefHeight="39.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-radius: 50; -fx-background-radius: 50; -fx-border-color: ffff00;" stylesheets="@application.css" />
+            <Label fx:id="filterType_label" layoutX="5.999999999999957" layoutY="30.0" text="Filtreleme Tipi:" textFill="YELLOW" AnchorPane.rightAnchor="693.2">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="filterList_button" layoutX="638.0" layoutY="24.0" mnemonicParsing="false" onAction="#filterList_button_Click" prefHeight="37.0" prefWidth="172.0" style="-fx-background-color: transparent; -fx-border-color: FFFF00; -fx-border-radius: 50; -fx-background-radius: 50;" text="Listele" textAlignment="CENTER" textFill="YELLOW">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/icon/bullet-list.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <DatePicker fx:id="startDate_picker" layoutX="426.0" layoutY="12.0" prefHeight="20.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: ffff00;" visible="false" />
+            <DatePicker fx:id="finishDate_picker" layoutX="426.0" layoutY="45.0" prefHeight="20.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: ffff00;" visible="false" />
+            <Label fx:id="startDate_label" layoutX="366.0" layoutY="14.0" text="Baş. T:" textFill="YELLOW" visible="false">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="finishDate_label" layoutX="360.0" layoutY="47.0" text="Bitiş. T:" textFill="YELLOW" visible="false">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="customerName_text" layoutX="428.0" layoutY="24.0" nodeOrientation="LEFT_TO_RIGHT" onKeyPressed="#customerName_text_Pressed" prefHeight="20.0" prefWidth="200.0" style="-fx-text-fill: white; -fx-background-color: transparent; -fx-border-color: FFFF00; -fx-border-radius: 50; -fx-background-radius: 50;" visible="false">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <Label fx:id="customerName_label" alignment="TOP_CENTER" layoutX="367.0" layoutY="30.0" text="M. Adı:" textFill="YELLOW" visible="false">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

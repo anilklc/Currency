@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="670.0" maxWidth="960.0" prefHeight="670.0" prefWidth="960.0" style="-fx-background-color: #1A1A1A;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MoneyAddController">
+   <children>
+      <AnchorPane layoutX="49.0" layoutY="48.0" maxHeight="670.0" maxWidth="450.0" prefHeight="275.0" prefWidth="407.0" style="-fx-background-color: #1A1A1A; -fx-background-radius: 20; -fx-border-color: FFFF00; -fx-border-radius: 20;">
+         <children>
+            <Label layoutX="27.0" layoutY="-12.0" style="-fx-background-color: #1A1A1A;" text="Para Ekle" textFill="YELLOW">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="aMoneyUnit_cBox" layoutX="201.0" layoutY="18.0" maxHeight="35.0" maxWidth="200.0" onAction="#aMoneyUnit_cBox_Click" prefHeight="39.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-radius: 50; -fx-background-radius: 50; -fx-border-color: ffff00; -fx-text-fill: white;" stylesheets="@application.css" />
+            <TextField fx:id="aMoney_text" disable="true" layoutX="201.0" layoutY="59.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="20.0" prefWidth="200.0" style="-fx-text-fill: white; -fx-background-color: transparent; -fx-border-color: FFFF00; -fx-border-radius: 50; -fx-background-radius: 50;" AnchorPane.rightAnchor="4.0">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="aMoneyAdd_text" layoutX="200.0" layoutY="100.0" nodeOrientation="LEFT_TO_RIGHT" onKeyTyped="#textControl" prefHeight="20.0" prefWidth="200.0" style="-fx-text-fill: white; -fx-background-color: transparent; -fx-border-color: FFFF00; -fx-border-radius: 50; -fx-background-radius: 50;" AnchorPane.rightAnchor="4.0">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="confirmation_text" layoutX="171.0" layoutY="177.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="20.0" prefWidth="200.0" style="-fx-text-fill: white; -fx-background-color: transparent; -fx-border-color: FFFF00; -fx-border-radius: 50; -fx-background-radius: 50;" AnchorPane.rightAnchor="4.0">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <Label fx:id="moneyUnit_label" layoutX="102.0" layoutY="23.0" text="Para Birimi:" textFill="YELLOW" AnchorPane.rightAnchor="205.0">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="moneyAdd_button" layoutX="104.0" layoutY="222.0" mnemonicParsing="false" onAction="#moneyAdd_button_Click" prefHeight="20.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: FFFF00; -fx-border-radius: 50; -fx-background-radius: 50;" text="Para Ekle" textAlignment="CENTER" textFill="YELLOW">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/icon/up-arrow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="confirmation_label" layoutX="70.0" layoutY="144.0" text="Onay Kodu:" textFill="YELLOW" AnchorPane.rightAnchor="205.0">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="confirmation" layoutX="277.0" layoutY="144.0" text="12345" textFill="YELLOW">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="aMoney_label" layoutX="32.0" layoutY="64.0" text="Şuanki Para Miktarı:" textFill="YELLOW" AnchorPane.rightAnchor="205.0">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="aMoneyAdd_label" layoutX="2.0" layoutY="105.0" text="Eklenilcek Para Miktarı:" textFill="YELLOW" AnchorPane.rightAnchor="205.0">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="498.0" layoutY="48.0" maxHeight="670.0" maxWidth="450.0" prefHeight="275.0" prefWidth="407.0" style="-fx-background-color: #1A1A1A; -fx-background-radius: 20; -fx-border-color: FFFF00; -fx-border-radius: 20;">
+         <children>
+            <Label layoutX="27.0" layoutY="-12.0" style="-fx-background-color: #1A1A1A;" text="Para Birimi Ekle" textFill="YELLOW">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="moneyUnit_cBox" layoutX="201.0" layoutY="18.0" maxHeight="35.0" maxWidth="200.0" onAction="#moneyUnit_cBox_Click" prefHeight="39.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-radius: 50; -fx-background-radius: 50; -fx-border-color: ffff00; -fx-text-fill: white;" stylesheets="@application.css">
+               <cursor>
+                  <Cursor fx:constant="DISAPPEAR" />
+               </cursor></ComboBox>
+            <ComboBox fx:id="moneyCode_cBox" layoutX="201.0" layoutY="58.0" maxHeight="35.0" maxWidth="200.0" onAction="#moneyCode_cBox_Click" prefHeight="39.0" prefWidth="200.0" style="-fx-text-fill: white; -fx-background-color: transparent; -fx-border-radius: 50; -fx-background-radius: 50; -fx-border-color: ffff00;" stylesheets="@application.css" />
+            <TextField fx:id="moneyAdd_text" layoutX="200.0" layoutY="100.0" nodeOrientation="LEFT_TO_RIGHT" onKeyTyped="#textControl" prefHeight="20.0" prefWidth="200.0" style="-fx-text-fill: white; -fx-background-color: transparent; -fx-border-color: FFFF00; -fx-border-radius: 50; -fx-background-radius: 50;" AnchorPane.rightAnchor="4.0">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="confirmation2_text" layoutX="171.0" layoutY="177.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="20.0" prefWidth="200.0" style="-fx-text-fill: white; -fx-background-color: transparent; -fx-border-color: FFFF00; -fx-border-radius: 50; -fx-background-radius: 50;" AnchorPane.rightAnchor="4.0">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <Label fx:id="moneyUnit2_label" layoutX="102.0" layoutY="23.0" text="Para Birimi:" textFill="YELLOW" AnchorPane.rightAnchor="205.0">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="moneyUnitAdd_button" layoutX="104.0" layoutY="222.0" mnemonicParsing="false" onAction="#moneyUnitAdd_button_Click" prefHeight="20.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: FFFF00; -fx-border-radius: 50; -fx-background-radius: 50;" text="Para Birimi Ekle" textAlignment="CENTER" textFill="YELLOW">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/icon/up-arrow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="confirmation2_label" layoutX="70.0" layoutY="144.0" text="Onay Kodu:" textFill="YELLOW" AnchorPane.rightAnchor="205.0">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="confirmation2" layoutX="277.0" layoutY="144.0" text="12345" textFill="YELLOW">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="moneyCode_label" layoutX="32.0" layoutY="64.0" text="Para Kodu:" textFill="YELLOW" AnchorPane.rightAnchor="205.0">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="moneyAdd_label" layoutX="2.0" layoutY="105.0" text="Eklenilcek Para Miktarı:" textFill="YELLOW" AnchorPane.rightAnchor="205.0">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="49.0" layoutY="347.0" maxHeight="670.0" maxWidth="450.0" prefHeight="275.0" prefWidth="407.0" style="-fx-background-color: #1A1A1A; -fx-background-radius: 20; -fx-border-color: FFFF00; -fx-border-radius: 20;">
+         <children>
+            <Label layoutX="27.0" layoutY="-12.0" style="-fx-background-color: #1A1A1A;" text="Para Çıkar" textFill="YELLOW">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="dMoneyUnit_cBox" layoutX="201.0" layoutY="18.0" maxHeight="35.0" maxWidth="200.0" onAction="#dMoneyUnit_cBox_Click" prefHeight="39.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-radius: 50; -fx-background-radius: 50; -fx-border-color: ffff00; -fx-text-fill: white;" stylesheets="@application.css" />
+            <TextField fx:id="dMoney_text" disable="true" layoutX="201.0" layoutY="59.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="20.0" prefWidth="200.0" style="-fx-text-fill: white; -fx-background-color: transparent; -fx-border-color: FFFF00; -fx-border-radius: 50; -fx-background-radius: 50;" AnchorPane.rightAnchor="4.0">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="moneyDel_text" layoutX="200.0" layoutY="100.0" nodeOrientation="LEFT_TO_RIGHT" onKeyTyped="#textControl" prefHeight="20.0" prefWidth="200.0" style="-fx-text-fill: white; -fx-background-color: transparent; -fx-border-color: FFFF00; -fx-border-radius: 50; -fx-background-radius: 50;" AnchorPane.rightAnchor="4.0">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="dConfirmation_text" layoutX="171.0" layoutY="177.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="20.0" prefWidth="200.0" style="-fx-text-fill: white; -fx-background-color: transparent; -fx-border-color: FFFF00; -fx-border-radius: 50; -fx-background-radius: 50;" AnchorPane.rightAnchor="4.0">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <Label fx:id="moneyUnit3_label" layoutX="102.0" layoutY="23.0" text="Para Birimi:" textFill="YELLOW" AnchorPane.rightAnchor="205.0">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="moneyDel_button" layoutX="104.0" layoutY="222.0" mnemonicParsing="false" onAction="#moneyDel_button_Click" prefHeight="20.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: FFFF00; -fx-border-radius: 50; -fx-background-radius: 50;" text="Para Çıkar" textAlignment="CENTER" textFill="YELLOW">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/icon/down-arrow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="dConfirmation_label" layoutX="70.0" layoutY="144.0" text="Onay Kodu:" textFill="YELLOW" AnchorPane.rightAnchor="205.0">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="dConfirmation" layoutX="277.0" layoutY="144.0" text="12345" textFill="YELLOW">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="dMoney_label" layoutX="32.0" layoutY="64.0" text="Şuanki Para Miktarı:" textFill="YELLOW" AnchorPane.rightAnchor="205.0">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="aMoneyAdd_label2" layoutX="2.0" layoutY="105.0" text="Çıkarılcak Para Miktarı:" textFill="YELLOW" AnchorPane.rightAnchor="205.0">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="498.0" layoutY="347.0" maxHeight="670.0" maxWidth="450.0" prefHeight="275.0" prefWidth="407.0" style="-fx-background-color: #1A1A1A; -fx-background-radius: 20; -fx-border-color: FFFF00; -fx-border-radius: 20;">
+         <children>
+            <Label layoutX="27.0" layoutY="-12.0" style="-fx-background-color: #1A1A1A;" text="Para Birimi Çıkar" textFill="YELLOW">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="dMoneyUnit2_cBox" layoutX="154.0" layoutY="70.0" maxHeight="35.0" maxWidth="200.0" prefHeight="39.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-radius: 50; -fx-background-radius: 50; -fx-border-color: ffff00; -fx-text-fill: white;" stylesheets="@application.css" />
+            <TextField fx:id="dConfirmation2_text" layoutX="151.0" layoutY="147.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="20.0" prefWidth="200.0" style="-fx-text-fill: white; -fx-background-color: transparent; -fx-border-color: FFFF00; -fx-border-radius: 50; -fx-background-radius: 50;" AnchorPane.rightAnchor="56.0">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <Label fx:id="moneyUnit_label11" layoutX="57.0" layoutY="75.0" text="Para Birimi:" textFill="YELLOW" AnchorPane.rightAnchor="254.0">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="moneyUnitDel_button" layoutX="104.0" layoutY="222.0" mnemonicParsing="false" onAction="#moneyUnitDel_button_Click" prefHeight="20.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: FFFF00; -fx-border-radius: 50; -fx-background-radius: 50;" text="Para Birimi Çıkar" textAlignment="CENTER" textFill="YELLOW">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/icon/down-arrow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="dConfirmation2_label" layoutX="55.0" layoutY="114.0" text="Onay Kodu:" textFill="YELLOW" AnchorPane.rightAnchor="257.0">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="dConfirmation2" layoutX="230.0" layoutY="114.0" text="12345" textFill="YELLOW">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
